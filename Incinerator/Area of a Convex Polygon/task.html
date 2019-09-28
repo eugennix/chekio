@@ -1,0 +1,49 @@
+<p>
+    There is a convex polygon on a coordinate plane. This polygon is presented as a list of vertices coordinates.
+    Each vertex is connected sequentially with the last connecting back to the first.
+    A polygon has <strong>N</strong> vertices.
+    You should write a program that will calculate the area of a polygon.
+    The result should be given with one digits precision as &plusmn;0.1.
+</p>
+<p style="text-align: center">
+<img class="for_info_only"
+     title="area-convex-polygon"
+     src="https://py-static.checkio.org/media/task/media/c382ee50f32c460fb8b907939607eb0d/area-convex-polygon.png"
+     alt="area-convex-polygon"
+     width="600px"/>
+<img class="for_editor_only"
+     title="area-convex-polygon"
+     src="https://py-static.checkio.org/media/task/media/c382ee50f32c460fb8b907939607eb0d/area-convex-polygon.png"
+     alt="area-convex-polygon"
+     width="380px"/>
+</p>
+
+<p><strong>Input: </strong> Coordinates as a list of lists. Each list contains two integers.</p>
+
+<p><strong>Output: </strong> The area of the polygon as a float.</p>
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+<pre class="brush: python">checkio([[1, 1], [9, 9], [9, 1]]) == 32
+checkio([[4, 10], [7, 1], [1, 4]]) == 22.5
+checkio([[1, 2], [3, 8], [9, 8], [7, 1]]) == 40
+checkio([[3, 3], [2, 7], [5, 9], [8, 7], [7, 3]]) == 26
+checkio([[7, 2], [3, 2], [1, 5],
+         [3, 9], [7, 9], [9, 6]]) == 42
+checkio([[4, 1], [3, 4], [3, 7], [4, 8],
+         [7, 9], [9, 6], [7, 1]]) == 35.5</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This concept is very useful in topography and architecture.
+    You can improve the algorithm and calculate the area of any zone on the map taking into account
+    elevation and other points of interest. You could also use this idea to construct something like a building, or a boat.
+
+</p>
+
+
+<p>
+    <strong>Precondition:</strong> 3 &le; N &le; 8<br>
+    &forall; x, y ∈ coordinates : 0 &le; x &le; 10; 0 &le; y &le; 10;<br>
+</p>

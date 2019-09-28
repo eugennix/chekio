@@ -1,0 +1,56 @@
+<p>
+You have a device that uses a <a href='https://en.wikipedia.org/wiki/Seven-segment_display'>Seven-segment display</a> to display 2 digit numbers.
+However, some of the segments aren't working and can't be displayed.
+</p>
+<p>
+You will be given information on the lit and broken segments.
+You won't know whether the broken segment is lit or not.
+You have to count and return the total number that the device may be displaying.
+</p>
+
+<p>The input is a set of lit segments (the first argument) and broken segments (the second argument).</p>
+<ul>
+    <li>Uppercase letters represent the segments of the first out two digit number.</li>
+    <li>Lowercase letters represent the segments of the second out two digit number.</li>
+    <li>topmost: 'A(a)', top right: 'B(b)', bottom right: 'C(c)', bottommost: 'D(d)', bottom left: 'E(e)', top left: 'F(f)', middle: 'G(g)'</li>
+</ul>
+
+<div>
+    <p style="text-align: left;">
+        <img  title="example" src="https://py-static.checkio.org/media/task/media/f137d7959e3c4a7b9e210252c6c8af12/checkio_seven_segment_00.png" alt="example" style="max-height: 150px"/>
+    </p>
+</div>
+
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+    <pre class="brush: python">
+seven_segment({'B', 'C', 'b', 'c'}, {'A'}) == 2    #11, 71
+seven_segment({'B', 'C', 'a', 'c', 'd', 'f', 'g'}, {'A', 'D', 'G', 'e'}) == 6    #15, 16, 35, 36, 75, 76
+seven_segment({'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f'}, {'G', 'g'}) == 4    #0, 8, 80, 88</pre> </div>
+
+<div>
+    <p style="text-align: left;">
+        <img  title="example" src="https://py-static.checkio.org/media/task/media/f137d7959e3c4a7b9e210252c6c8af12/checkio_seven_segment_example_00.png" alt="example" style="max-height: 160px"/>
+    </p>
+</div>
+
+<p><strong>Input: </strong>Two arguments. The first one contains the lit segments as a set of letters representing segments. The second one contains the broken segments as a set of letters representing segments.</p>
+
+<p><strong>Output: </strong>The total number that the device may be displaying.</p>
+
+<p>
+<!--
+<strong>How it is used:</strong><br>
+You will get the basis of nonogram-solver.  The actual nonogaram puzzles consists of multiple rows and also has clue numbers for the columns.
+All nonogram puzzles are designed to be able to identify all cells as 'filled' or 'empty' with these clue numbers.
+-->
+</p>
+
+<p>
+<strong>Precondition:</strong><br>
+<ul>
+    <li>all(re.match('[A-Ga-g]', s) for s in lit | broken)</li>
+    <li>len(lit  &amp;  broken) == 0</li>
+</ul>
+</p>

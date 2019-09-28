@@ -1,0 +1,60 @@
+<p>
+    You stand by the edge of a lake with two empty jars. You notice that both of the jars have a volume.
+    You can fill each jar with water from the lake, pour water from one jar to the other or pour water back into lake.
+    You should measure the volume of water in <strong>either</strong> jar.
+    The required volume of water may be in either of the jars and it does not matter which.
+</p>
+<p>
+    Each action is described as a string of two symbols: from and to.
+    The jars are marked as <strong>1</strong> and <strong>2</strong>, the lake is marked <strong>0</strong>.
+    If you want to take water from the lake and fill first jar, then it's "01". 
+    To pour water from second jar into the first would be "21".
+    Dump water out of the first jar and back into the lake would be "10".
+    When you fill a jar from the lake, that jars volume will be full.
+    When you pour water out a jar and into the lake, that jars volume will be empty.
+    If you pour water from one jar to another, you can only pour as much as will fill the full volume of the receiving jar.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="water-jars" src="https://py-static.checkio.org/media/task/media/d9b9055f34354e14b3b605a955c62137/water-jars.png" alt="water-jars" width="600px"/>
+    <img class="for_editor_only" title="water-jars" src="https://py-static.checkio.org/media/task/media/d9b9055f34354e14b3b605a955c62137/water-jars.png" alt="water-jars" width="380px"/>
+</p>
+
+<p>
+    The function has three arguments: The volume of first jar, the volume of second jar and the goal.
+    All arguments are positive integers (number > 0).
+    You should return a list with action's sequence.<br>
+    <strong>The solution must contain the minimum possible number of steps</strong>
+</p>
+
+<p>
+    <strong>Input: </strong> The volume of first jar, the volume of second jar and the goal as integers.
+</p>
+
+<p>
+    <strong>Output: </strong> The sequence of steps as a list/tuple with strings.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">checkio(5, 7, 6) == ['02', '21', '10', '21', '02', '21', '10', '21', '02', '21']
+checkio(3, 4, 1) == ["02", "21"]</pre>
+</div>
+
+
+<p class="for_info_only">
+    <strong>How it is used:</strong>
+    This is a kind of optimisation problem with restrictions.
+    It can be used for the development of the technological process and reducing cost of manufacturing.
+</p>
+
+
+<p><strong>Precondition: </strong><br>
+    0 &lt; first, second, goal &lt; 10<br>
+    goal &le; first or goal &le; second<br>
+    All test cases have solution.
+</p>

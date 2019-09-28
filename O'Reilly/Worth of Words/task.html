@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+
+<p>
+    Hey, are you ready for a Scrabble game party?<br>    
+    You have a list of words and you have to find only one that is the most valuable among  them.<br>
+    Rules:<br>
+    The worth of each word is equivalent to the sum of letters which it consists of.<br>
+    The values of the letters are as follow:<br>
+    e, a, i, o, n, r, t, l, s, u = 1<br>
+    d, g = 2<br>
+    b, c, m, p = 3<br>
+    f, h, v, w, y = 4<br>
+    k = 5<br>
+    j, x = 8<br>
+    q, z = 10<br>
+    For example, the worth of the word 'dog' is 5, because 'd' = 2, 'o' = 1 and 'g' = 2.
+</p>
+
+
+<p style="text-align: center;">
+    <img  title="Worth of words" src="https://py-static.checkio.org/media/task/media/22eb44f2e71e4da08538c234964641c9/words.png" alt="example" style="max-height: 70px">
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> A list of words.
+</p>
+
+<p>
+    <strong>Output: </strong> The most valuable word.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+
+<pre class="brush: python">worth_of_words(['hi', 'quiz', 'bomb', 'president']) == 'quiz'
+worth_of_words(['zero', 'one', 'two', 'three', 'four', 'five']) == 'zero'</pre>
+
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For the lexicographic analysis of the texts.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition</strong>:<br>
+    2 <= words <= 10<br>
+    Real words only<br>
+    lowercase letters only
+</p>

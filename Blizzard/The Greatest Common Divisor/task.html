@@ -1,0 +1,39 @@
+<div class="story">
+    <p>
+        "[The Euclidean algorithm] is the granddaddy of all algorithms, because it is the oldest nontrivial algorithm
+        that has survived to the present day."<br>
+        -- Donald Knuth, The Art of Computer Programming, Vol. 2: Seminumerical Algorithms, 2nd edition (1981).
+    </p>
+</div>
+
+<p>
+    <a href="http://en.wikipedia.org/wiki/Greatest_common_divisor">The greatest common divisor</a> (GCD), also known as
+    the greatest common factor of two or more integers (at least one of which is not zero), is the largest positive
+    integer that divides a number without a remainder. For example, the GCD of 8 and 12 is 4.
+</p>
+<p>
+    You are given an arbitrary number of positive integers.
+    You should find the greatest common divisor for these numbers.
+</p>
+
+<p><strong>Input: </strong> An arbitrary number of positive integers.</p>
+
+<p><strong>Output: </strong> The greatest common divisor as an integer.</p>
+
+<p class="p1"><strong>Example:</strong></p>
+<pre class="brush: python">
+great_common_divisor(6, 4) == 2
+great_common_divisor(2, 4, 8) == 2
+</pre>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    GCD is a basic concept found in mathematically oriented software. This is a good example of a simple algorithm which
+    has many possible applications.
+
+</p>
+
+<p>
+    <strong>Precondition: </strong><br>
+    1 &lt; len(args) &le; 10<br>
+    all(0 &lt; x &le; 2 ** 32 for x in args)

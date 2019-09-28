@@ -1,0 +1,45 @@
+<p>
+The New Year is coming and you've decided to decorate your home. But simple 
+lights and Christmas decorations are so boring, so you have figured that you can use your programing skills and create something really cool and original.
+Your task is to create the class Lamp() and method light() which will make the lamp glow with one of the four colors in the sequence - (‘Green’, ‘Red’, ‘Blue’, ‘Yellow’). When the light() method is used for the first time, the color should be 'Green', the second time - 'Red' and so on.
+If the current color is 'Yellow', the next color should be 'Green' and so on.
+
+In this mission you can use the <a href='https://en.wikipedia.org/wiki/State_pattern'>State</a> design pattern. It's highly useful in the situations where object should change its behaviour depending on the internal state.
+</p>
+
+<p>
+<strong>Example</strong>:
+<pre class="brush: python">
+lamp_1 = Lamp()
+lamp_2 = Lamp()
+
+lamp_1.light() #Green
+lamp_1.light() #Red
+lamp_2.light() #Green
+    
+lamp_1.light() == "Blue"
+lamp_1.light() == "Yellow"
+lamp_1.light() == "Green"
+lamp_2.light() == "Red"
+lamp_2.light() == "Blue"
+</pre>
+</p>
+<br>
+
+<p>
+    <strong>Input: </strong>A few strings indicating the number of times the lamp is being turned on.
+</p>
+
+<p>
+    <strong>Output: </strong>The color of the lamp.
+</p>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    To implement objects with mutable behavior.
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+    4 colors: Green, Red, Blue, Yellow.
+</p>

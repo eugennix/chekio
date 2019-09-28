@@ -1,0 +1,85 @@
+<table class="for_info_only">
+    <tr>
+        <td>
+        <img src="https://py-static.checkio.org/media/task/media/86682fc9f3404ade81505f95048d18b4/moon-landing-60543_640.jpg" style="max-height: 294px; margin: 10px; float: left;">
+        </td>
+        <td style="font-style: italic; text-align: center;">
+            <p>That's one small step for [a] man, one giant leap for mankind.</p>
+            <p>Neil Alden Armstrong (1930-2012)</p>
+        </td>
+    </tr>
+</table>
+
+<p>
+In this mission the size of the hexagonal grid is 12x9 ('A1' to 'L9').
+</p>
+<ul>
+    <li>It’s characteristics:
+        <ul>
+            <li>it’s flat-topped;</li>
+            <li>the alphabet letters represent columns and numbers represent rows;</li>
+            <li>the even columns are being pushed down.</li>
+        </ul>
+    </li>
+</ul>
+
+<p>
+You are given a set of obstacle hexes on the Moon as an input value.
+You have to return a set of all the candidate landing sites.
+</p>
+
+<ul>
+    <li>The conditions for the  landing site hex:
+        <ul>
+            <li>the hex isn't an obstacle hex;</li>
+            <li>there’re no obstacle hexes in equidistant ( 1 or more ) hexes;</li>
+            <li>the above radius is the longest.</li>
+        </ul>
+    </li>
+</ul>
+
+
+<strong>NOTE:</strong>
+<ul>
+    <li>The outside of the hexagonal grid is always considered as an obstacle hex.</li>
+    <li>If there aren’t any  landing sites, return an empty set.</li>
+</ul>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+<!-- Do NOT change the indentation of this pre-block -->
+<pre class="brush: python">assert landing_site({'E5', 'E7', 'F4', 'F6', 'G4', 'G6', 'H3', 'H5'}) == {'C3', 'J7'}
+assert landing_site({'A4', 'C2', 'C6', 'C9', 'D4', 'D7', 'F1', 'F5',
+                     'F8', 'G4', 'H7', 'I2', 'I5', 'I9', 'K3', 'K8', 'L5'}) == {'B7', 'E3', 'J6'}
+</pre>
+<!-- pre-block end -->
+    <p style="text-align: center;">
+        <img src="https://py-static.checkio.org/media/task/media/86682fc9f3404ade81505f95048d18b4/example_01.png" style="max-height: 294px; margin: 10px;">
+        <img src="https://py-static.checkio.org/media/task/media/86682fc9f3404ade81505f95048d18b4/example_02.png" style="max-height: 294px; margin: 10px;">
+    </p>
+</div>
+
+<p>
+    <strong>Input: </strong>
+    The obstacles on the Moon (a set of strings).
+</p>
+
+<p>
+    <strong>Output: </strong>
+    A set of all the candidate landing sites (a set of strings).
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+</p>
+<ul>
+    <li>all(re.fullmatch('[A-L][1-9]', i) for i in input)</li>
+</ul>
+<p>
+    <strong>How it is used:</strong>
+    For finding the needed area.
+</p>
